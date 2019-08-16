@@ -24,34 +24,61 @@
                                 @enderror
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
 
-                        <div class="form-group">
-                          <label class="col-md-4 control-label">Address</label>
-                          <div class="col-md-6">
-                            <input type="text" class="form-control" name="address" 
-                              value="{{ old('address') }}">
-                          </div>
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
+
+                                @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
-                        <div class="form-group">
-                          <label class="col-md-4 control-label">City</label>
-                          <div class="col-md-6">
-                            <input type="text" class="form-control" name="city" 
-                              value="{{ old('city') }}">
-                          </div>
+                        
+                        <div class="form-group row">
+                            <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="city" type="text" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city" autofocus>
+
+                                @error('city')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
-                        <div class="form-group">
-                          <label class="col-md-4 control-label">State</label>
-                          <div class="col-md-6">
-                            <input type="text" class="form-control" name="state" 
-                              value="{{ old('state') }}">
-                          </div>
+                        
+                        <div class="form-group row">
+                            <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('State') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="state" type="text" class="form-control @error('state') is-invalid @enderror" name="state" value="{{ old('state') }}" required autocomplete="state" autofocus>
+
+                                @error('state')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
-                        <div class="form-group">
-                          <label class="col-md-4 control-label">Zip</label>
-                          <div class="col-md-6">
-                            <input type="text" class="form-control" name="zip" 
-                              value="{{ old('zip') }}">
-                          </div>
+                        
+                        <div class="form-group row">
+                            <label for="zip" class="col-md-4 col-form-label text-md-right">{{ __('Zip') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="zip" type="text" class="form-control @error('zip') is-invalid @enderror" name="zip" value="{{ old('zip') }}" required autocomplete="zip" autofocus>
+
+                                @error('zip')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
 
                         <div class="form-group row">

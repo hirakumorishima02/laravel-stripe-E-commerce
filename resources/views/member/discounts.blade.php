@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <h1>Welcome to Your Home Lawn Care Provider</h1>
+
+<h1>Discounts Coupon Page</h1>
+
 @endsection

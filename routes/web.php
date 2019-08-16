@@ -18,4 +18,6 @@ Route::get('/', function () {
 Route::resource('about', 'AboutController', ['only' => ['index']]);
 Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@create']);
 Route::post('contact', ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+Route::get('discounts', 'DiscountsController@index');
+
 Auth::routes();
