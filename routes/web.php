@@ -11,6 +11,7 @@
 |
 */
 
+Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,4 +22,8 @@ Route::post('contact', ['as' => 'contact_store', 'uses' => 'ContactController@st
 Route::get('discounts', 'DiscountsController@index');
 Route::get('products', 'ProductController@index');
 Route::get('products/{id}', 'ProductController@show');
-Auth::routes();
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function()
+{
+    Route::resource('products', 'ProductController');
+});
