@@ -36,5 +36,8 @@ return [
     'mandrill' => [
         'secret' => env('MAIL_PASSWORD'),
     ],
-
+    'stripe' => [
+        'model'  => 'User',
+        'secret' => env('STRIPE_API_SECRET'),
+    ],
 ];
