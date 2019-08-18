@@ -27,3 +27,5 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
 {
     Route::resource('products', 'ProductController');
 });
+
+Route::get('plans', 'SubscriptionsController@index');
