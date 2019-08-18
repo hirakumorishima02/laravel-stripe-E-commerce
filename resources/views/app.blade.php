@@ -11,6 +11,5 @@
     Welcome to Your Professional Lawn Care Service Provider
     </h1>
     @yield('content')
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> 
 </body>
 </html>

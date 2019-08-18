@@ -28,4 +28,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
     Route::resource('products', 'ProductController');
 });
 
-Route::get('plans', 'SubscriptionsController@index');
+Route::get('plans', 'SubscriptionsController@index')->name('plans');
+Route::get('plans/subscribe/{planId}', 'SubscriptionsController@subscribe');
+Route::post('plans/process','SubscriptionsController@process')->name('plans.process');
