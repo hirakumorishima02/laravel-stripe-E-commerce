@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Stripe\Stripe;
 
 class SubscriptionsController extends Controller
 {
@@ -40,13 +40,9 @@ class SubscriptionsController extends Controller
         if ($this->planNotAvailable($planId)) {
             return redirect()->back()->withErrors('Plan is required');
         }
+        Stripe::setApiKey(env('STRIPE_API_SECRET'));
         $user = Auth::user();
-        $user->subscription($planId)->create($request->get('stripe_token'), [
-            'email' => $user->email,
-            'metadata' => [
-                'name' => $user->name,
-            ],
-        ]);
+        $user->newSubscription('main', 'plan_FduAwOAXHAUV4D')->trialDays(30)->create($request->stripeToken);
         return redirect('invoices');
     }
 }
