@@ -27,7 +27,7 @@ class SubscriptionsController extends Controller
     }
     
     protected function planNotAvailable($id){
-    $available = ['premium', 'regular', 'trial'];
+    $available = ['Premium', 'plan_Fdu9EtdLJBzXnS', 'Trial'];
         if ( ! in_array($id, $available)){ //in_arrayで$availableの中から$idを探す
          return true;
         }
@@ -42,7 +42,11 @@ class SubscriptionsController extends Controller
         }
         Stripe::setApiKey(env('STRIPE_API_SECRET'));
         $user = Auth::user();
-        $user->newSubscription('main', 'plan_FduAwOAXHAUV4D')->create($request->stripe_token);
+        $user->newSubscription('main', $planId)->create($request->stripe_token,
+        ['email' => $user->email,
+            'metadata' => [
+                'name' => $user->name,
+            ]]);
         return redirect('invoices');
     }
 }

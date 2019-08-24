@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e7d5ca78de92d4def43a174dc787317",
+    "content-hash": "29c3762a3d1e792776ff76dbd8656d03",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -723,47 +723,40 @@
         },
         {
             "name": "laravel/cashier",
-            "version": "v10.1.0",
+            "version": "v9.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/cashier.git",
-                "reference": "0bd631b32b867a0300f71b1afad3461297420f01"
+                "reference": "77e7ebabd2f71c1059c4829fcbc1e4e662610b2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/cashier/zipball/0bd631b32b867a0300f71b1afad3461297420f01",
-                "reference": "0bd631b32b867a0300f71b1afad3461297420f01",
+                "url": "https://api.github.com/repos/laravel/cashier/zipball/77e7ebabd2f71c1059c4829fcbc1e4e662610b2a",
+                "reference": "77e7ebabd2f71c1059c4829fcbc1e4e662610b2a",
                 "shasum": ""
             },
             "require": {
                 "dompdf/dompdf": "^0.8.0",
                 "ext-json": "*",
-                "illuminate/contracts": "~5.8.0|^6.0",
-                "illuminate/database": "~5.8.0|^6.0",
-                "illuminate/http": "~5.8.0|^6.0",
-                "illuminate/notifications": "~5.8.0|^6.0",
-                "illuminate/routing": "~5.8.0|^6.0",
-                "illuminate/support": "~5.8.0|^6.0",
-                "illuminate/view": "~5.8.0|^6.0",
-                "moneyphp/money": "^3.2",
-                "nesbot/carbon": "^2.0",
+                "illuminate/contracts": "~5.7.0|~5.8.0|^6.0",
+                "illuminate/database": "~5.7.0|~5.8.0|^6.0",
+                "illuminate/http": "~5.7.0|~5.8.0|^6.0",
+                "illuminate/routing": "~5.7.0|~5.8.0|^6.0",
+                "illuminate/support": "~5.7.0|~5.8.0|^6.0",
+                "illuminate/view": "~5.7.0|~5.8.0|^6.0",
+                "nesbot/carbon": "^1.26.3|^2.0",
                 "php": "^7.1.3",
-                "stripe/stripe-php": "^6.40",
-                "symfony/http-kernel": "^4.3",
-                "symfony/intl": "^4.3"
+                "stripe/stripe-php": "~6.0",
+                "symfony/http-kernel": "~4.0"
             },
             "require-dev": {
-                "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^3.8|^4.0",
-                "phpunit/phpunit": "^7.5|^8.0"
-            },
-            "suggest": {
-                "ext-intl": "Allows for more locales besides the default \"en\" when formatting money values."
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~7.4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.0-dev"
+                    "dev-master": "9.0-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -792,7 +785,7 @@
                 "laravel",
                 "stripe"
             ],
-            "time": "2019-08-20T17:58:22+00:00"
+            "time": "2019-07-30T15:18:35+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1157,88 +1150,6 @@
             "time": "2019-06-18T20:09:29+00:00"
         },
         {
-            "name": "moneyphp/money",
-            "version": "v3.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/moneyphp/money.git",
-                "reference": "f6085de6c565e98d2f9a7311a605987b54e06d5e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/moneyphp/money/zipball/f6085de6c565e98d2f9a7311a605987b54e06d5e",
-                "reference": "f6085de6c565e98d2f9a7311a605987b54e06d5e",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "cache/taggable-cache": "^0.4.0",
-                "doctrine/instantiator": "^1.0.5",
-                "ext-bcmath": "*",
-                "ext-gmp": "*",
-                "ext-intl": "*",
-                "florianv/exchanger": "^1.0",
-                "florianv/swap": "^3.0",
-                "leanphp/phpspec-code-coverage": "^3.0 || ^4.0",
-                "moneyphp/iso-currencies": "^3.0",
-                "php-http/message": "^1.4",
-                "php-http/mock-client": "^1.0.0",
-                "phpspec/phpspec": "^3.0",
-                "phpunit/phpunit": "^5.7 || ^6.4 || ^7.0",
-                "psr/cache": "^1.0",
-                "symfony/phpunit-bridge": "^4"
-            },
-            "suggest": {
-                "ext-bcmath": "Calculate without integer limits",
-                "ext-gmp": "Calculate without integer limits",
-                "ext-intl": "Format Money objects with intl",
-                "florianv/exchanger": "Exchange rates library for PHP",
-                "florianv/swap": "Exchange rates library for PHP",
-                "psr/cache-implementation": "Used for Currency caching"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Money\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com"
-                },
-                {
-                    "name": "Mathias Verraes",
-                    "email": "mathias@verraes.net",
-                    "homepage": "http://verraes.net"
-                },
-                {
-                    "name": "Frederik Bosch",
-                    "email": "f.bosch@genkgo.nl"
-                }
-            ],
-            "description": "PHP implementation of Fowler's Money pattern",
-            "homepage": "http://moneyphp.org",
-            "keywords": [
-                "Value Object",
-                "money",
-                "vo"
-            ],
-            "time": "2019-02-07T18:01:35+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "1.24.0",
             "source": {
@@ -1318,16 +1229,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.23.0",
+            "version": "2.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "97a08830a22ce0b69549a4966773c0eae900468d"
+                "reference": "767617a047e5b8b8b3b0b6023a2650847ed7df02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/97a08830a22ce0b69549a4966773c0eae900468d",
-                "reference": "97a08830a22ce0b69549a4966773c0eae900468d",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/767617a047e5b8b8b3b0b6023a2650847ed7df02",
+                "reference": "767617a047e5b8b8b3b0b6023a2650847ed7df02",
                 "shasum": ""
             },
             "require": {
@@ -1381,7 +1292,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-08-12T17:19:41+00:00"
+            "time": "2019-08-17T13:57:34+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2728,81 +2639,6 @@
             "time": "2019-07-28T07:10:23+00:00"
         },
         {
-            "name": "symfony/intl",
-            "version": "v4.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/intl.git",
-                "reference": "741376a9127841ffae39f197f8bd0ab2d4772157"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/intl/zipball/741376a9127841ffae39f197f8bd0ab2d4772157",
-                "reference": "741376a9127841ffae39f197f8bd0ab2d4772157",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/polyfill-intl-icu": "~1.0"
-            },
-            "require-dev": {
-                "symfony/filesystem": "~3.4|~4.0"
-            },
-            "suggest": {
-                "ext-intl": "to use the component with locales other than \"en\""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Intl\\": ""
-                },
-                "classmap": [
-                    "Resources/stubs"
-                ],
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                },
-                {
-                    "name": "Eriksen Costa",
-                    "email": "eriksen.costa@infranology.com.br"
-                },
-                {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "A PHP replacement layer for the C intl extension that includes additional data from the ICU library.",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "i18n",
-                "icu",
-                "internationalization",
-                "intl",
-                "l10n",
-                "localization"
-            ],
-            "time": "2019-07-24T14:47:54+00:00"
-        },
-        {
             "name": "symfony/mime",
             "version": "v4.3.3",
             "source": {
@@ -2972,64 +2808,6 @@
             "keywords": [
                 "compatibility",
                 "iconv",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2019-08-06T08:03:45+00:00"
-        },
-        {
-            "name": "symfony/polyfill-intl-icu",
-            "version": "v1.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-intl-icu.git",
-                "reference": "66810b9d6eb4af54d543867909d65ab9af654d7e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/66810b9d6eb4af54d543867909d65ab9af654d7e",
-                "reference": "66810b9d6eb4af54d543867909d65ab9af654d7e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "symfony/intl": "~2.3|~3.0|~4.0|~5.0"
-            },
-            "suggest": {
-                "ext-intl": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.12-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for intl's ICU-related data and classes",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "icu",
-                "intl",
                 "polyfill",
                 "portable",
                 "shim"
