@@ -27,7 +27,7 @@ class SubscriptionsController extends Controller
     }
     
     protected function planNotAvailable($id){
-    $available = ['Premium', 'plan_Fdu9EtdLJBzXnS', 'Trial'];
+    $available = ['plan_Fdu92JzwGqspER', 'plan_Fdu9EtdLJBzXnS', 'plan_FduAwOAXHAUV4D'];
         if ( ! in_array($id, $available)){ //in_arrayで$availableの中から$idを探す
          return true;
         }
@@ -48,5 +48,11 @@ class SubscriptionsController extends Controller
                 'name' => $user->name,
             ]]);
         return redirect('invoices');
+    }
+
+    public function invoices()
+    {
+        $user = Auth::user();
+        return view('subscriptions.invoices', compact('user'));
     }
 }

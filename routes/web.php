@@ -31,3 +31,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
 Route::get('plans', 'SubscriptionsController@index')->name('plans');
 Route::get('plans/subscribe/{planId}', 'SubscriptionsController@subscribe');
 Route::post('plans/process','SubscriptionsController@process')->name('plans.process');
+
+// 請求書ダウンロード
+Route::get('invoices', 'SubscriptionsController@invoices')->name('invoices');

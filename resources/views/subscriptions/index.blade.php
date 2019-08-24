@@ -18,7 +18,7 @@
                 monthly weed-free service.</p>
                 <div class="text-center">
                     <a class="btn btn-primary"
-                        href="/plans/subscribe/trial">
+                        href="/plans/subscribe/plan_FduAwOAXHAUV4D">
                         Select
                     </a>
                 </div>
@@ -35,7 +35,7 @@
                 With this plan you get monthly spraying and fertilizing. </p>
                 <div class="text-center">
                     <a class="btn btn-primary"
-                        href="/plans/subscribe/premium">
+                        href="/plans/subscribe/plan_Fdu92JzwGqspER">
                         Select
                     </a>
                 </div>
