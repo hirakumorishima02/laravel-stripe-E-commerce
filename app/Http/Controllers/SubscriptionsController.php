@@ -42,7 +42,7 @@ class SubscriptionsController extends Controller
         }
         Stripe::setApiKey(env('STRIPE_API_SECRET'));
         $user = Auth::user();
-        $user->newSubscription('main', 'plan_FduAwOAXHAUV4D')->trialDays(30)->create($request->stripeToken);
+        $user->newSubscription('main', 'plan_FduAwOAXHAUV4D')->create($request->stripe_token);
         return redirect('invoices');
     }
 }
