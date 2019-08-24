@@ -55,4 +55,17 @@ class SubscriptionsController extends Controller
         $user = Auth::user();
         return view('subscriptions.invoices', compact('user'));
     }
+    
+    public function downloadInvoice($id)
+    {
+        return Auth::user()->downloadInvoice($id, [
+            'header'  => 'We Dew Lawns',
+            'vendor'  => 'WeDewLawns',
+            'product' => Auth::user()->stripe_plan,
+            'street' => '123 Lawn Drive',
+            'location' => 'Lawndale NC, 28076',
+            'phone' => '703.555.1212',
+            'url' => 'www.wedewlawns.com',
+        ]);
+    }
 }
