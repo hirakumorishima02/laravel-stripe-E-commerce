@@ -37,7 +37,7 @@ return [
         'secret' => env('MAIL_PASSWORD'),
     ],
     'stripe' => [
-        'model'  => 'User',
+        'model'  => \App\User::class,
         'secret' => env('STRIPE_API_SECRET'),
     ],
 ];

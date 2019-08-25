@@ -68,4 +68,21 @@ class SubscriptionsController extends Controller
             'url' => 'www.wedewlawns.com',
         ]);
     }
+    
+    public function swapPlans(Request $request)
+    {
+      $planId = $request->get('plan_id');
+      if ($this->planNotAvailable($planId)) {
+          return redirect()->back()->withErrors('Plan is required');
+      }
+      Auth::user()->subscription('main')->swap($planId);
+      return redirect()->back()->withMessage('Plan changed!');
+    }
+    
+    public function cancelPlan(Request $request)
+    {
+        $planId = $request->get('plan_id');
+      Auth::user()->subscription('main')->cancel($planId);
+      return redirect('invoices')->with('message','Your plan has been cancelled');
+    }
 }
