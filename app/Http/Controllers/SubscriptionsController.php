@@ -42,7 +42,8 @@ class SubscriptionsController extends Controller
         }
         Stripe::setApiKey(env('STRIPE_API_SECRET'));
         $user = Auth::user();
-        $user->newSubscription('main', $planId)->create($request->stripe_token,
+        $coupon = $request->coupon;
+        $user->newSubscription('main', $planId)->withCoupon($coupon)->create($request->stripe_token,
         ['email' => $user->email,
             'metadata' => [
                 'name' => $user->name,

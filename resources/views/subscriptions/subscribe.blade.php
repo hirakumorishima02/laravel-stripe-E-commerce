@@ -65,6 +65,24 @@
             >
         </div>
       </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="coupon" class="control-label">
+            Coupon Code
+          </label>
+        </div>
+        <div class="col-sm-4">
+          <input type="text"
+            class="form-control"
+            id="coupon"
+            placeholder="Coupon Code"
+            autofocus data-stripe="number"
+            name="coupon"
+            value="
+            {{ App::environment() == 'local' ? 'MFcT2qRs' : '' }}
+            ">
+        </div>
+      </div>
     </div>
     <div class="center-block form-actions">
       <button type="submit" class="submit-button btn btn-primary btn-lg">
