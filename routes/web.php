@@ -24,6 +24,8 @@ Route::get('products', 'ProductController@index');
 Route::get('products/{id}', 'ProductController@show');
 Route::post('cart/store', 'CartsController@store');
 Route::get('cart', 'CartsController@index');
+Route::get('cart/remove/{id}', 'CartsController@remove');
+Route::post('cart/complete', 'CartController@complete')->name('cart.complete');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function()
 {
