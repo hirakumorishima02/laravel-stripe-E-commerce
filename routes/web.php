@@ -22,6 +22,8 @@ Route::post('contact', ['as' => 'contact_store', 'uses' => 'ContactController@st
 Route::get('discounts', 'DiscountsController@index');
 Route::get('products', 'ProductController@index');
 Route::get('products/{id}', 'ProductController@show');
+Route::post('cart/store', 'CartsController@store');
+Route::get('cart', 'CartsController@index');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function()
 {
@@ -40,3 +42,4 @@ Route::get('invoices/download/{id}','SubscriptionsController@downloadInvoice');
 Route::post('plans/swap','SubscriptionsController@swapPlans')->name('plans.swap');
 Route::post('plans/cancel', 'SubscriptionsController@cancelPlan')->name('plans.cancel');
 Route::post('stripe/webhook', 'StripeController@handleWebhook');
+
