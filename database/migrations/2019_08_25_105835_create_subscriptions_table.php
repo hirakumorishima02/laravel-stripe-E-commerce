@@ -22,7 +22,7 @@ class CreateSubscriptionsTable extends Migration
             $table->timestamp('trial_ends_at');
             $table->timestamp('ends_at');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
