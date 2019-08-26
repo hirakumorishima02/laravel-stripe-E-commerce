@@ -20,7 +20,7 @@
     <label for="price">Price</label>
     <input type='text' name='price' id='price'>
     <label for="is_downloadble">Downloadble</label>
-    <input type='checkbox' name='is_downloadble' id='is_downloadble'>
+    <input type='checkbox' name='is_downloadble' id='is_downloadble' value='true'>
 </div>
 <div class="center-block form-actions">
   <button type="submit" class="submit-button btn btn-primary btn-lg">

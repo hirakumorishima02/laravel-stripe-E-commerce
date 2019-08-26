@@ -15,11 +15,11 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('sku')->unique();
+            $table->string('sku');
             $table->string('name');
             $table->text('description');
             $table->decimal('price', 6, 2);
-            $table->boolean('is_downloadble')->default(false);
+            $table->boolean('is_downloadble');
             $table->timestamps();
         });
     }
