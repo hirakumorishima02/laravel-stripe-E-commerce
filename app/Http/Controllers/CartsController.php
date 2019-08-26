@@ -43,11 +43,11 @@ class CartsController extends Controller
       $user = Auth::user();
     
       $total = $user->cart->sum(function($item){
-          return $item->product->priceToCents();
+          return $item->product->price;
       });
 
       $charge = $user->charge($total, [
-          'source' => $request->get('stripe_token'),
+          'source' => 'tok_mastercard',
           'receipt_email' => $user->email,
           'metadata' => [
               'name' => $user->name,
@@ -62,12 +62,12 @@ class CartsController extends Controller
       $order = new Order();
       $order->order_number = $charge->id;
       $order->email = $user->email;
-      $order->billing_name = $request->input('card_name');
-      $order->billing_address = $request->input('address');
-      $order->billing_city = $request->input('city');
-      $order->billing_state = $request->input('state');
-      $order->billing_zip = $request->input('zip');
-      $order->billing_country = $request->input('country');
+      $order->billing_name = $request->input('billing_name');
+      $order->billing_address = $request->input('billing_address');
+      $order->billing_city = $request->input('billing_city');
+      $order->billing_state = $request->input('billing_state');
+      $order->billing_zip = $request->input('billing_zip');
+      $order->billing_country = $request->input('billing_country');
     
       $order->shipping_name = 
         $request->input('shipping_name');

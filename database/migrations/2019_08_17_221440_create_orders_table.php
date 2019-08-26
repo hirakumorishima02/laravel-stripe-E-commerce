@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
         {
             $table->increments('id');
             $table->integer('product_id')->unsigned();
+            $table->string('order_number');
             $table->string('email');
             $table->string('billing_name');
             $table->string('billing_address');
