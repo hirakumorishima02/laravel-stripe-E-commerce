@@ -45,7 +45,7 @@ class CartsController extends Controller
       $total = $user->cart->sum(function($item){
           return $item->product->priceToCents();
       });
-    
+
       $charge = $user->charge($total, [
           'source' => $request->get('stripe_token'),
           'receipt_email' => $user->email,
