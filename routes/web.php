@@ -26,6 +26,7 @@ Route::get('products/{id}', 'ProductController@show');
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function()
 {
     Route::resource('products', 'ProductController');
+    Route::post('admin/store', 'ProductController@store')->name('admin.store');
 });
 
 Route::get('plans', 'SubscriptionsController@index')->name('plans');
@@ -37,7 +38,5 @@ Route::get('invoices', 'SubscriptionsController@invoices')->name('invoices');
 Route::get('invoices/download/{id}','SubscriptionsController@downloadInvoice');
 
 Route::post('plans/swap','SubscriptionsController@swapPlans')->name('plans.swap');
-
 Route::post('plans/cancel', 'SubscriptionsController@cancelPlan')->name('plans.cancel');
-
 Route::post('stripe/webhook', 'StripeController@handleWebhook');
