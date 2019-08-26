@@ -16,7 +16,6 @@ class CreateOrdersTable extends Migration
        Schema::create('orders', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('product_id')->unsigned();
             $table->string('order_number');
             $table->string('email');
             $table->string('billing_name');
@@ -33,11 +32,6 @@ class CreateOrdersTable extends Migration
             $table->string('shipping_country')->nullable();
             $table->string('onetimeurl')->nullable();
             $table->timestamps();
-            
-            $table->foreign('product_id') //外部キー
-                    ->references('id')
-                    ->on('products')
-                    ->onDelete('cascade'); 
         });
     }
 
