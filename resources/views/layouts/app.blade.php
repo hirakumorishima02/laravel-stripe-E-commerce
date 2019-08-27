@@ -19,14 +19,15 @@
     <!-- Styles -->
     <!--<link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
     <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    <link rel="stylesheet" href='{{ secure_asset('css/styles.css') }}'>
 </head>
 <body>
     <div id="app">
         <nav class="nav-wrapper">
             <div class="container">
-                <a class="brand-logo" href="{{ url('/') }}">
+                <a class="brand-logo left" href="{{ url('/') }}">
                     WE DEW LAWNS
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -60,6 +61,9 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
+                            </li>
+                            <li>
+                                <a href="/cart"><i class="material-icons" style='padding-top:5px;'>shopping_cart</i></a>
                             </li>
                         @endguest
                     </ul>
