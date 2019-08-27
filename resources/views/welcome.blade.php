@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="slider">
         <ul class="slides">
@@ -114,7 +113,7 @@
         <div class="col m4 l3 offset-l2">
           <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
-              <a href="">
+              <a href="/plans">
                 <img src="img/subscription.jpg" sizes="(max-width: 305px) 100vw, 305px" />
                 <span class="card-title">Subscription Services</span>
               </a>
@@ -124,7 +123,7 @@
         <div class="col m4 l3">
           <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
-              <a href="">
+              <a href="/products">
                 <img src="img/products.jpg"sizes="(max-width: 305px) 100vw, 305px" />
                 <span class="card-title">Products</span>
               </a>
@@ -134,7 +133,7 @@
         <div class="col m4 l3">
           <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
-              <a href="">
+              <a href="/contact">
                 <img src="img/contact.jpg"sizes="(max-width: 305px) 100vw, 305px" />
                 <span class="card-title">Contact Us</span>
               </a>

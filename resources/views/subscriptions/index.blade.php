@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 @section('intro')
   <div class="intro">
     <div class="container">
@@ -8,56 +8,69 @@
   </div>
 @endsection
 @section('content')
-    <div class="col-xs-12 col-sm-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title text-center">Trial ¥1,000</h3>
+<table class='highlight centered plans'>
+    <thead>
+      <tr>
+          <th>Service</th>
+          <th>Description</th>
+          <th>Pruning</th>
+          <th>Fertilizer</th>
+          <th>Mowing</th>
+          <th>Cleaning</th>
+          <th></th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td>Trial</td>
+        <td>Get a healthy, weed-free lawn with our patented monthly weed-free service.</td>
+        <td><i class="material-icons">panorama_fish_eye</i></td>
+        <td><i class="material-icons">panorama_fish_eye</i></td>
+        <td></td>
+        <td></td>
+        <td>
+            <div>
+                <a class="btn btn-primary"
+                    href="/plans/subscribe/plan_FduAwOAXHAUV4D">
+                    $10
+                </a>
             </div>
-            <div class="panel-body">
-                <p>Get a healthy, weed-free lawn with our patented
-                monthly weed-free service.</p>
-                <div class="text-center">
-                    <a class="btn btn-primary"
-                        href="/plans/subscribe/plan_FduAwOAXHAUV4D">
-                        Select
-                    </a>
-                </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Regular</td>
+        <td>Make your lawn shine! With this plan you get monthly spraying, fertilizing, and spring/fall aeration.</td>
+        <td><i class="material-icons">panorama_fish_eye</i></td>
+        <td><i class="material-icons">panorama_fish_eye</i></td>
+        <td><i class="material-icons">panorama_fish_eye</i></td>
+        <td></td>
+        <td>
+            <div>
+                <a class="btn btn-primary"
+                    href="/plans/subscribe/plan_Fdu9EtdLJBzXnS">
+                    $30
+                </a>
             </div>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title text-center">Premium ¥5,000</h3>
+        </td>
+      </tr>
+      <tr>
+        <td>Premium</td>
+        <td>Take your lawn to the next level with our Premium plan.
+                With this plan you get monthly spraying and fertilizing.</td>
+        <td><i class="material-icons">panorama_fish_eye</i></td>
+        <td><i class="material-icons">panorama_fish_eye</i></td>
+        <td><i class="material-icons">panorama_fish_eye</i></td>
+        <td><i class="material-icons">panorama_fish_eye</i></td>
+        <td>
+            <div>
+                <a class="btn btn-primary"
+                    href="/plans/subscribe/plan_Fdu92JzwGqspER">
+                    $50
+                </a>
             </div>
-            <div class="panel-body">
-                <p>Take your lawn to the next level with our Premium plan.
-                With this plan you get monthly spraying and fertilizing. </p>
-                <div class="text-center">
-                    <a class="btn btn-primary"
-                        href="/plans/subscribe/plan_Fdu92JzwGqspER">
-                        Select
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h3 class="panel-title text-center">Regular ¥3,000</h3>
-            </div>
-            <div class="panel-body">
-                <p><b>Our Best Value!</b></p>
-                <p>Make your lawn shine! With this plan you get monthly
-                spraying, fertilizing, and spring/fall aeration. </p>
-                <div class="text-center">
-                    <a class="btn btn-primary"
-                        href="/plans/subscribe/plan_Fdu9EtdLJBzXnS">
-                        Select
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+        </td>
+      </tr>
+    </tbody>
+</table>
 @endsection

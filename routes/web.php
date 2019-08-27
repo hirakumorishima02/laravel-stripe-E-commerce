@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 // about
-Route::resource('about', 'AboutController', ['only' => ['index']]); 
+// Route::resource('about', 'AboutController', ['only' => ['index']]);
 //contact form
 Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@create']); 
 Route::post('contact', ['as' => 'contact_store', 'uses' => 'ContactController@store']);
