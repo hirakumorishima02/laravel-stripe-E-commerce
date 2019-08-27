@@ -30,6 +30,7 @@ Route::post('cart/complete', 'CartsController@complete')->name('cart.complete');
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function()
 {
     Route::resource('products', 'ProductController');
+    Route::get('orders', 'ProductController@orders');
     Route::post('admin/store', 'ProductController@store')->name('admin.store');
 });
 

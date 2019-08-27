@@ -4,12 +4,19 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Product;
+use App\Order;
 
 class ProductController extends Controller
 {
     public function index() {
         return view('admin/index');
+    }
+    
+    public function orders() {
+        $orders = Order::all();
+        return view('admin/orders',compact('orders'));
     }
     
     public function store(Request $request) {

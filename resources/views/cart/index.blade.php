@@ -27,6 +27,7 @@
   {!! Form::open([
     'route' => 'cart.complete',
     'class' => 'form',
+    'id' => 'purchase-form'
   ]) !!}
     <div class="form-group">
       <div class="row">
@@ -39,6 +40,7 @@
           <input type="text"
             class="form-control"
             id="card-number"
+            name="cardnumber"
             placeholder="Valid Card Number"
             required autofocus data-stripe="number"
             value="

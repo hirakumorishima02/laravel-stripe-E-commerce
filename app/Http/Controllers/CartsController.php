@@ -47,7 +47,7 @@ class CartsController extends Controller
       });
 
       $charge = $user->charge($total, [
-          'source' => 'tok_mastercard',
+          'source' => $request->get('stripe_token'),
           'receipt_email' => $user->email,
           'metadata' => [
               'name' => $user->name,
