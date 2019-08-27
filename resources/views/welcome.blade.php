@@ -29,9 +29,9 @@
     <!--------->
     <!--About-->
     <!--------->
-    <div class='grey darken-4'>
-        <h2 class='center-align' style='margin-top:0;padding-top:20px;color:white;'>About</h2>
-        <p style='padding:10px 80px 50px 80px;color:white;'>
+    <div class='grey darken-4 about'>
+        <h2 class='center-align title'>About</h2>
+        <p >
             If you are looking to change your lawn service company or you don’t want to do it yourself anymore,
             you have found the right place. This is also a place for current customers.
             Contact info is at the bottom of this page.
@@ -52,7 +52,7 @@
     <!---------------------->
     <!--   Icon Section   -->
     <!---------------------->
-      <div class="row" style='padding:0 50px 0 50px;'>
+      <div class="row icon-section">
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons large">sentiment_very_satisfied</i></h2>
@@ -146,11 +146,11 @@
     <!---------------------->
     
     <!--------->
-    <!--About-->
+    <!--footer-->
     <!--------->
-    <div style='height:2px;background-color:#ee6e73;margin:0;'></div>
-    <div class='grey darken-4' style='height:150px;'></div>
+    <div class='red-foot'></div>
+    <div class='grey darken-4 black-foot'></div>
     <!--------->
-    <!--About-->
+    <!--footer-->
     <!--------->
 @endsection

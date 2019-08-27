@@ -5,8 +5,29 @@
 body{
     font-family: 'Quicksand', sans-serif;
 }
-
-
+/*===================================
+              welcome.blade
+===================================*/
+.about > h2 {
+    margin-top:0;
+    padding-top:20px;
+    color:white;
+}
+.about > p{
+    padding:10px 80px 50px 80px;
+    color:white;
+}
+.icon-section{
+    padding:0 50px 0 50px;
+}
+.red-foot{
+    height:2px;
+    background-color:#ee6e73;
+    margin:0;
+}
+.black-foot{
+    height:150px;
+}
 /*===================================
               subscriptions
 ===================================*/

@@ -23,7 +23,15 @@ class SubscriptionsController extends Controller
         if ($this->planNotAvailable($planId)) {
             return redirect()->route('plans');
         }
-        return view('subscriptions.subscribe', compact('planId'));
+
+        if($planId == 'plan_Fdu92JzwGqspER') {
+            $plan_name = 'Premium Plan';
+        } elseif($planId == 'plan_Fdu9EtdLJBzXnS') {
+            $plan_name = 'Regular Plan';
+        } elseif($planId == 'plan_FduAwOAXHAUV4D') {
+            $plan_name = 'Trial Plan';
+        }
+        return view('subscriptions.subscribe', compact('planId','plan_name'));
     }
     
     protected function planNotAvailable($id){
