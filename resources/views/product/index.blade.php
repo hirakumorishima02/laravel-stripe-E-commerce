@@ -12,7 +12,7 @@
                     <div class="card">
                       <div class="card-image waves-effect waves-block waves-light">
                         <a href="products/{{ $product->id }}">
-                          <img width="305" height="229" src="https://adbeus.com/wp-content/uploads/2016/11/prrnmzis3siruz2gv6tm-305x229.jpg" class="responsive-img wp-post-image">
+                          <img width="305" height="229" src="{{ $product->file_path }}" class="responsive-img wp-post-image">
                           <span class="card-title home">{{ $product->name }}</span>
                           <p class="card-title home">${{ $product->price }}</p>
                         </a>

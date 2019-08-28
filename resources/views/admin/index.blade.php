@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('app')
 @section('content')
 <h1>Admin Page</h1>
   {!! Form::open([
     'route' => 'admin.store',
     'class' => 'form',
-
+    'files' => true
   ]) !!}
 <div class="form-group">
     <label for="name">Product Name</label><br>
@@ -21,6 +21,9 @@
     <input type='text' name='price' id='price'>
     <label for="is_downloadble">Downloadble</label>
     <input type='checkbox' name='is_downloadble' id='is_downloadble' value='true'>
+    <br>
+    <label for="file_path">image</label>
+    <input type='file' name='file_path' id='file_path' value='true'>
 </div>
 <div class="center-block form-actions">
   <button type="submit" class="submit-button btn btn-primary btn-lg">

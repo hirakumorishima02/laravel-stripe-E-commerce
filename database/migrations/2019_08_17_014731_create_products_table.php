@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->decimal('price', 6, 2);
             $table->boolean('is_downloadble');
+            $table->text('file_path')->nullable();
             $table->timestamps();
         });
     }

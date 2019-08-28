@@ -148,7 +148,7 @@
     <!--------->
     <!--footer-->
     <!--------->
-    <div class='red-foot'></div>
+    <div class='red-foot deep-orange'></div>
     <div class='grey darken-4 black-foot'></div>
     <!--------->
     <!--footer-->

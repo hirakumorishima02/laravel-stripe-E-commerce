@@ -25,7 +25,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="nav-wrapper">
+        <nav class="nav-wrapper deep-orange">
             <div class="container">
                 <a class="brand-logo left" href="{{ url('/') }}">
                     Nekorokke Lawn Service
@@ -64,10 +64,10 @@
                             </li>
                             <li>
                                 <!--ショッピングカートに商品が入っているかどうかの判定-->
-                                <?php $carts = App\Cart::where('complete','0')->where('user_id',Auth::id())->first(); ?>
+                                <?php $carts = App\Cart::where('complete','0')->where('user_id', Auth::id())->get(); ?>
                                 <!--もし商品が入っていればバッジを表示-->
-                                @if(isset($carts))
-                                <span class="new badge"></span>
+                                @if(isset($carts[0]))
+                                <span class="new badge">{{ count($carts) }}</span>
                                 @endif
                                 <a href="/cart"><i class="material-icons" style='padding-top:5px;'>shopping_cart</i></a>
                             </li>
@@ -80,6 +80,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+
         @yield('footer_js')
     </div>
     <!-- Compiled and minified JavaScript -->

@@ -1,7 +1,16 @@
 @extends('layouts.app')
 @section('content')
 @if (count($cart) == 0)
-    <p>Your cart is currently empty</p>
+<div class="row">
+  <div class="col 12">
+    <div class="card">
+      <div class="card-image">
+        <img src="/img/empty-cart.jpg">
+        <span class="card-title empty-title">Your cart is currently empty.</span>
+      </div>
+    </div>
+  </div>
+</div>
 @else
 <table class="table table-border">
   <thead>

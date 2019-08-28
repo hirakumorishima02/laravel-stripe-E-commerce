@@ -14,7 +14,8 @@
         "laravel/cashier": "~9.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "laravelcollective/html": "^5.8"
+        "laravelcollective/html": "^5.8",
+        "league/flysystem-aws-s3-v3": "~1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
