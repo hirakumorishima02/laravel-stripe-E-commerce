@@ -1,12 +1,11 @@
-@extends('app')
-
+@extends('layouts.app')
 @section('content')
 
-<h1>Contact WeDewLawns</h1>
-
 @if (count($errors) > 0)
-    <div class="alert alert-danger">
-        Please correct the following errors:<br />
+<div class="row">
+    <div class='col s10 m10 l5 offset-s1 offset-m1 offset-l3'>
+    <div class="card-panel red lighten-2">
+        <h5>Please correct the following errors!</h5>
         <ul>
             <!--エラーの表示-->
             @foreach ($errors->all() as $error)
@@ -14,39 +13,40 @@
             @endforeach
         </ul>
     </div>
+    </div>
+</div>
 @endif
 
 <!--novalidate属性が存在すると、フォームの入力内容の検証を無効にする。-->
 {!! Form::open(array('route' => 'contact_store', 
   'class' => 'form', 'novalidate' => 'novalidate')) !!}
 
-<div class="form-group">
-    {!! Form::label('Your Name') !!}
-    {!! Form::text('name', null, 
-        array('required', 
-              'class'=>'form-control', 
-              'placeholder'=>'Your name')) !!}
-</div>
-
-<div class="form-group">
+<div class="row">
+    <div class='col s10 m10 l5 offset-s1 offset-m1 offset-l3'>
+    <h4>Contact Us!</h4>
+    </div>
+    <div class='col s10 m10 l5 offset-s1 offset-m1 offset-l3'>
+        {!! Form::label('Your Name') !!}
+        {!! Form::text('name', null, 
+            array('required', 
+                  'class'=>'form-control')) !!}
+    </div>
+    <div class='col s10 m10 l5 offset-s1 offset-m1 offset-l3'>
     {!! Form::label('Your E-mail Address') !!}
     {!! Form::text('email', null, 
         array('required', 
-              'class'=>'form-control', 
-              'placeholder'=>'Your e-mail address')) !!}
-</div>
-
-<div class="form-group">
+              'class'=>'form-control')) !!}
+    </div>
+    <div class='col s10 m10 l5 offset-s1 offset-m1 offset-l3'>
     {!! Form::label('Your Message') !!}
     {!! Form::textarea('message', null, 
         array('required', 
-              'class'=>'form-control', 
-              'placeholder'=>'Your message')) !!}
-</div>
-
-<div class="form-group">
-    {!! Form::submit('Contact Us!', 
+              'class'=>'form-control materialize-textarea', )) !!}
+    </div>
+    <div class='col s10 m10 l5 offset-s1 offset-m1 offset-l3'>
+    {!! Form::submit('Send', 
       array('class'=>'btn btn-primary')) !!}
+    </div>
 </div>
 {!! Form::close() !!}
 
