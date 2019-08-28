@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 @section('content')
 @if (count($cart) == 0)
     <p>Your cart is currently empty</p>

@@ -63,6 +63,12 @@
                                 </form>
                             </li>
                             <li>
+                                <!--ショッピングカートに商品が入っているかどうかの判定-->
+                                <?php $carts = App\Cart::where('complete','0')->where('user_id',Auth::id())->first(); ?>
+                                <!--もし商品が入っていればバッジを表示-->
+                                @if(isset($carts))
+                                <span class="new badge"></span>
+                                @endif
                                 <a href="/cart"><i class="material-icons" style='padding-top:5px;'>shopping_cart</i></a>
                             </li>
                         @endguest
