@@ -12,7 +12,7 @@
                     <div class="card">
                       <div class="card-image waves-effect waves-block waves-light">
                         <a href="products/{{ $product->id }}">
-                          <img width="305" height="229" src="{{ $product->file_path }}" class="responsive-img wp-post-image">
+                          <img width="100%" src="{{ $product->file_path }}" class="responsive-img wp-post-image">
                           <span class="card-title home">{{ $product->name }}</span>
                           <p class="card-title home">${{ $product->price }}</p>
                         </a>
