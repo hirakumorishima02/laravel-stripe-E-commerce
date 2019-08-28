@@ -31,3 +31,6 @@ body{
 /*===================================
               subscriptions
 ===================================*/
+.select-form {
+    display: block!important;
+}

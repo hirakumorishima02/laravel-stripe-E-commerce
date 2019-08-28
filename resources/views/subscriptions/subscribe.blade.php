@@ -23,9 +23,7 @@
               id="card-number"
               placeholder="Valid Card Number"
               required autofocus data-stripe="number"
-              value="
-              {{ App::environment() == 'local' ? '4242424242424242' : '' }}
-              ">
+              value="4242424242424242">
           </div>
         </div>
   
@@ -38,7 +36,7 @@
               data-stripe="exp-month"
               placeholder="MM"
               id="card-month"
-              value="{{ App::environment() == 'local' ? '12' : '' }}"
+              value="12"
               required>
     </div>
       <div class='col s4 m2'>
@@ -47,7 +45,7 @@
               class="form-control"
               name="exp_year" data-stripe="exp-year"
               placeholder="YYYY" id="card-year"
-              value="{{ App::environment() == 'local' ? '2020' : '' }}"
+              value="2020"
               required>
     </div>
     <div class='col s4 m2'>
@@ -56,7 +54,7 @@
               class="form-control" id="card-cvc"
               placeholder=""
               size="6"
-              value="{{ App::environment() == 'local' ? '111' : '' }}"
+              value="111"
               required
               >
     </div>
@@ -70,9 +68,7 @@
               placeholder="Coupon Code"
               autofocus data-stripe="number"
               name="coupon"
-              value="
-              {{ App::environment() == 'local' ? 'MFcT2qRs' : '' }}
-              ">
+              value="MFcT2qRs">
     </div>
   </div>
         <button type="submit" class="submit-button btn btn-primary btn-lg">

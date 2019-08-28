@@ -17,6 +17,7 @@
           <th>Fertilizer</th>
           <th>Mowing</th>
           <th>Cleaning</th>
+          <th>Period</th>
           <th></th>
       </tr>
     </thead>
@@ -29,6 +30,7 @@
         <td><i class="material-icons">panorama_fish_eye</i></td>
         <td></td>
         <td></td>
+        <td>1Month</td>
         <td>
             <div>
                 <a class="btn btn-primary"
@@ -45,6 +47,7 @@
         <td><i class="material-icons">panorama_fish_eye</i></td>
         <td><i class="material-icons">panorama_fish_eye</i></td>
         <td></td>
+        <td>1Month</td>
         <td>
             <div>
                 <a class="btn btn-primary"
@@ -62,6 +65,7 @@
         <td><i class="material-icons">panorama_fish_eye</i></td>
         <td><i class="material-icons">panorama_fish_eye</i></td>
         <td><i class="material-icons">panorama_fish_eye</i></td>
+        <td>1Month</td>
         <td>
             <div>
                 <a class="btn btn-primary"
