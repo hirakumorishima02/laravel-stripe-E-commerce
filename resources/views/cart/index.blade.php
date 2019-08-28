@@ -143,7 +143,7 @@ style="display: none;">
         data-stripe="exp-month"
         placeholder="MM"
         id="card-month"
-        value="{{ App::environment() == 'local' ? '12' : '' }}"
+        value="12"
         required>
     </div>
     <div class='col s4 m2'>
@@ -152,7 +152,7 @@ style="display: none;">
         class="form-control"
         name="exp_year" data-stripe="exp-year"
         placeholder="YYYY" id="card-year"
-        value="{{ App::environment() == 'local' ? '2020' : '' }}"
+        value="2020"
         required>
     </div>
     <div class='col s4 m2'>
@@ -161,7 +161,7 @@ style="display: none;">
         class="form-control" id="card-cvc"
         placeholder=""
         size="6"
-        value="{{ App::environment() == 'local' ? '111' : '' }}"
+        value="111"
         >
     </div>
   </div>
