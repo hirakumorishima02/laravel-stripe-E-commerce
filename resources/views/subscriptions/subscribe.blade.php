@@ -49,7 +49,7 @@
               required>
     </div>
     <div class='col s4 m2'>
-            <label for="card-cvc">Security Code</label>
+            <label for="card-cvc">CVC</label>
             <input type="text"
               class="form-control" id="card-cvc"
               placeholder=""
