@@ -28,7 +28,7 @@
         <nav class="nav-wrapper deep-orange">
             <div class="container">
                 <a class="brand-logo left" href="{{ url('/') }}">
-                    Nekorokke Lawn Service
+                    Raw Lawn Service
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -67,7 +67,7 @@
                                 <?php $carts = App\Cart::where('complete','0')->where('user_id', Auth::id())->get(); ?>
                                 <!--もし商品が入っていればバッジを表示-->
                                 @if(isset($carts[0]))
-                                <span class="new badge">{{ count($carts) }}</span>
+                                <span class="new badge" data-badge-caption="{{ count($carts) }}"></span>
                                 @endif
                                 <a href="/cart"><i class="material-icons" style='padding-top:5px;'>shopping_cart</i></a>
                             </li>

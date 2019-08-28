@@ -5,7 +5,7 @@
         <div class="col s12">
             <div class="section">
                 <div class="col s12">
-                    <span class="title">Our Products</span>
+                    <span class="new badge" data-badge-caption="Our Products"></span>
                 </div>
                 @foreach($products as $product)
                 <div class="col s12 m6 l4">
@@ -21,6 +21,10 @@
                 </div>
                 @endforeach
             </div>
+        </div>
+    <div class="row">
+        <div class="col s4 m4 l4 offset-s4 offset-m4 offset-l4">
+            {{ $products->links() }}
         </div>
     </div>
 </div>

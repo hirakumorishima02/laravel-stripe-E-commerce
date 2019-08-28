@@ -8,7 +8,7 @@ use App\Product;
 class ProductController extends Controller
 {
     public function index(){
-        $products = Product::orderBy('name', 'asc')->get();
+        $products = Product::orderBy('name', 'asc')->paginate(5);
         return view('product.index', compact('products'));
     }
     

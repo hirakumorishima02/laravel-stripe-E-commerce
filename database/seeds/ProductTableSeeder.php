@@ -105,7 +105,7 @@ class ProductTableSeeder extends Seeder
                 [2] It features a full-size keyboard, a machined aluminum case, and a thin and light structure. 
                 The MacBook Air is available with a screen size of 13.3-inch, with different models produced by Apple throughout the years.
                 MacBook Air models with an 11.6-inch screen were made available from 2010 through late 2016.[3]',
-                'price'=>120000,
+                'price'=>1200,
                 'is_downloadble'=>true,
                 'file_path'=>'https://hel-mane.s3.ap-southeast-1.amazonaws.com/file_path/JoauxH7luedGsaJ52ZsCqEbs0RuHmqI3ssoUWE22.jpeg',
             ],
