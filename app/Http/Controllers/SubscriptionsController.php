@@ -68,13 +68,13 @@ class SubscriptionsController extends Controller
     public function downloadInvoice($id)
     {
         return Auth::user()->downloadInvoice($id, [
-            'header'  => 'We Dew Lawns',
-            'vendor'  => 'WeDewLawns',
+            'header'  => 'Nekorokke Lawn Service',
+            'vendor'  => 'NekorokkeLawnService',
             'product' => Auth::user()->stripe_plan,
             'street' => '123 Lawn Drive',
             'location' => 'Lawndale NC, 28076',
             'phone' => '703.555.1212',
-            'url' => 'www.wedewlawns.com',
+            'url' => 'https://laravel-stripe-ecommerce.herokuapp.com',
         ]);
     }
     

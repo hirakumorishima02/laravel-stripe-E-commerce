@@ -28,7 +28,7 @@
         <nav class="nav-wrapper">
             <div class="container">
                 <a class="brand-logo left" href="{{ url('/') }}">
-                    WE DEW LAWNS
+                    Nekorokke Lawn Service
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
