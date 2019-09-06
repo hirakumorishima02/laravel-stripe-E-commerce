@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactFormRequest;
 class ContactController extends Controller
@@ -16,11 +17,9 @@ class ContactController extends Controller
             'user_message' => $request->get('message'),
         ];
     
-        \Mail::send('emails.contact', $data, function($message)
+        Mail::send('emails.contact', $data, function($message)
         {
-            $message->from(env('MAIL_FROM'));
-            $message->to(env('MAIL_FROM'), env('MAIL_NAME'));
-            $message->subject('WeDewLawns.com Inquiry');
+            $message->to('ujinchu@gmail.com')->subject('RawLawnService.com Inquiry');
         });
         return \Redirect::route('contact')
           ->with('message', 'Thanks for contacting us!');

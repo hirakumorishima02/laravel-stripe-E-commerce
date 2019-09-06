@@ -52,3 +52,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admi
     Route::post('admin/store', 'ProductController@store')->name('admin.store');
 });
 
+Route::get('/send', function () {
+    Mail::raw('本文', function($message)
+    {
+        $message->from('ujnchu@gmail.com', 'Hiraku');
+
+        $message->to('ujinchu@gmail.com');
+    });
+});

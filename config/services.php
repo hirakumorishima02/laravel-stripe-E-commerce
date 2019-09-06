@@ -17,7 +17,6 @@ return [
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
-        'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
     ],
 
     'postmark' => [
@@ -32,9 +31,6 @@ return [
 
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
-    ],
-    'mandrill' => [
-        'secret' => env('MAIL_PASSWORD'),
     ],
     'stripe' => [
         'model'  => \App\User::class,
